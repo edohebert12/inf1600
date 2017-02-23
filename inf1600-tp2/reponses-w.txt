@@ -45,7 +45,7 @@ op[4] = 0
 op[6] = 0
 op[5] = 0
 
-op = 00000111 = 7
+op = 0000111 = 7
 
 6DEF0229 nand 9B63E389
 
@@ -55,3 +55,58 @@ op = 00000111 = 7
 1111 0110 1001 1100 1111 1101 1111 0110
 
 F69CFDF6
+
+
+#5
+
+a)
+0x05555555 = 0000 0101 0101 0101 0101 0101 0101 0101
+           = 00000 10101 01010 10101 010101010101
+           = 10 21 10 21 1365
+
+op = 0b00000 = 0
+ra = 0b10101 = 21
+rb = 0b01010 = 10
+rc = 0b10101 = 21
+cnst = 0b010101010101 = 1365
+
+Les deux derniers octets forment une partie de la valeur de rc et la valeur de la constante (IR<11..0>). Par contre, l'opcode de l'instruction est 0, donc la valeur de sortie de l'UAL. Une autre instruction qui aurait le même résultat
+est 0x07654321.
+
+b) On peut faire deux instructions en parallèle, donc redre le code plus rapide. Non, on ne s'en est pas servis, toutes nos instructions prennent un cycle chaque.
+
+c) L'architecture à deux bus est plus flexible, car sur le processeur étudié au TP1, on peut seulement accéder à la mémoire à partir de la bascule T située après l'UAL (l'équivalent de A). Sur le processeur du TP2, la mémoire
+   peut être accédée directement à partir de la sortie de l'UAL sans affecter la valeur qui est storée dans A.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+E2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

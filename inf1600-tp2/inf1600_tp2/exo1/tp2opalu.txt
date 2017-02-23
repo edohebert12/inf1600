@@ -1,14 +1,14 @@
-# INF1600 - TP2
+﻿# INF1600 - TP2
 # Mémoire de décodage de l'opération de l'UAL
 #
 # Chaque octet dit quoi envoyer comme signal "alu_op" selon l'opcode d'une
 # instruction donnée. Ici, l'adresse correspond directement à l'opcode de
 # l'instruction et l'octet à cette adresse correspond au signal "alu_op".
 
-# Opcode 0xC ("add") :
+# Adresse 0xC ("add") :
 C	4A
 
-# Opcode 0xE ("nand") :
+# Adresse 0xE ("nand") :
 E	07	# <À MODIFIER>
 
 # Contrôle de l'UAL (1) : A + bus B
