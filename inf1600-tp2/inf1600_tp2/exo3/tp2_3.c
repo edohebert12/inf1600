@@ -15,7 +15,7 @@ extern void func_s(void);
 
 static void func_c(void) {
 	int i;
-	for (i=0; i<=5; i++){
+	for (i=0; i<=6; i++){
 		a = d + e - b;
 		if ((b-1000) < (c+500)) {
 			c = c - 500;
