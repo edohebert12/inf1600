@@ -2,7 +2,7 @@
 	i:
 		.int 0
 	max:
-		.int 8
+		.int 10
 
 .global func_s
 
@@ -24,6 +24,8 @@ func_s:
 		mov c, %edi
 		sub $1000, %esi
 		add $500, %edi
+		add $10000, %esi
+		add $10000, %edi
 		cmp %edi, %esi
 		jae else
 		mov c, %edx
