@@ -2,7 +2,7 @@
 	i:
 		.int 0
 	max:
-		.int 8
+		.int 10
 
 .global func_s
 
@@ -14,9 +14,9 @@ func_s:
 		ja fin
 		mov d, %eax
 		mov e, %ebx
+		mov b, %ecx
 		add %ebx, %eax
-		mov b, %ebx
-		sub %ebx, %eax
+		sub %ecx, %eax
 		mov %eax, a
 	
 	condition:
@@ -30,6 +30,7 @@ func_s:
 		sub $500, %ecx
 		mov %ecx, c
 		mov b, %ebx
+		mov c, %ecx
 		cmp %ecx, %ebx
 		jna repeat
 		mov b, %ebx
