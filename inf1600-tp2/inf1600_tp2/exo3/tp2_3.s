@@ -2,7 +2,7 @@
 	i:
 		.int 0
 	max:
-		.int 7
+		.int 10
 
 .global func_s
 
