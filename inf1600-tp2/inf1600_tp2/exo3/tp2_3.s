@@ -20,15 +20,15 @@ func_s:
 		mov %eax, a
 	
 	condition:
-		mov b, %ebx
-		mov c, %ecx
-		sub $1000, %ebx
-		add $500, %ecx
-		cmp %ecx, %ebx
+		mov b, %esi
+		mov c, %edi
+		sub $1000, %esi
+		add $500, %edi
+		cmp %edi, %esi
 		jae else
-		mov c, %ecx
-		sub $500, %ecx
-		mov %ecx, c
+		mov c, %edx
+		sub $500, %edx
+		mov %edx, c
 		mov b, %ebx
 		mov c, %ecx
 		cmp %ecx, %ebx
