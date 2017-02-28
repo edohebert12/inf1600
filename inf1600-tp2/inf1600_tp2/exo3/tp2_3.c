@@ -15,7 +15,7 @@ extern void func_s(void);
 
 static void func_c(void) {
 	int i;
-	for (i=0; i<=10; i++){
+	for (i=0; i<=0; i++){
 		a = d + e - b;
 		if ((b-1000) < (c+500)) {
 			c = c - 500;
@@ -39,14 +39,14 @@ int main(void) {
 	printf("a = %d    b = %d    c = %d    d = %d    e = %d\n", a, b, c, d, e);
 	printf("Le résultat devrait être le même les 3 fois :\n\n");
 	func_c();
-	printf("Version en langage C : %i\n", a);
+	printf("Version en langage C : %i, %i, %i, %i\n", a, b, c, d);
 	a = INIT_A;
 	b = INIT_B;
 	c = INIT_C;
 	d = INIT_D;
 	e = INIT_E;
 	func_s();
-	printf("Version en assembleur : %i\n", a);
+	printf("Version en assembleur : %i, %i, %i, %i\n", a, b, c, d);
 	a = INIT_A;
 	b = INIT_B;
 	c = INIT_C;
