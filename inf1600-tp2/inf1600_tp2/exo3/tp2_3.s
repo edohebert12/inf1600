@@ -31,6 +31,8 @@ func_s:
 		mov %edx, c
 		mov b, %ebx
 		mov c, %ecx
+		add $10000, %ebx
+		add $10000, %ecx
 		cmp %ecx, %ebx
 		jna repeat
 		mov b, %ebx
