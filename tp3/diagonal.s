@@ -15,7 +15,6 @@ matrix_diagonal_asm:
 	movl 8(%ebp), %ecx                  # ecx = inmatdata
 	movl 12(%ebp), %edx                 # edx = outmatdata
 	movl $0, %esi                       # esi = r * 4 + c
-	movl $0, %edi                       # edi = index (r * matorder + c)
 	jmp condition1
 	
 	condition1:
