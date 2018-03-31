@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="Model.Article" table="Article">
+		<id name="auteur" column="auteur" type="string" />
+		<property name="coauteur" column="coauteur" type="string" />
+		<property name="soumisLe" column="soumisLe" type="timestamp" />
+		
+		<many-to-one name = "departement" class="Model.Departement" fetch="join">
+			<column name="departement" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

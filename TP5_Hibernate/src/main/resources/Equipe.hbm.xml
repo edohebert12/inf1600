@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="Model.Equipe" table="Equipe">
+		<id name="nom" column="nom" type="string" />
+		<property name="dateCreation" column="dateCreation" type="date" />
+		<property name="responsable" column="responsable" type="string" />
+		<property name="nbrProjets" column="nbrProjets" type="integer" />
+		<many-to-one name = "dep" class="Model.Departement" fetch="join">
+			<column name="departement" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>
